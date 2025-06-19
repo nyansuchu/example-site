@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おしゃれBGMコレクション</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2e3a46;
+      --accent: #ffaf40;
+      --bg: #f7f9fb;
+      --card-bg: #ffffff;
+      --text: #333;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Helvetica Neue', 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      letter-spacing: 0.05em;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1rem 1.2rem 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-content h2 {
+      font-size: 1.2rem;
+      margin: 0 0 0.5rem;
+    }
+    .card-content p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0 0 1rem;
+      flex: 1;
+    }
+    .card-content audio {
+      width: 100%;
+      outline: none;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+      color: #999;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .card img {
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>おすすめBGMコレクション</h1>
+  </header>
+
+  <main class="container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://placehold.co/600x400?text=Lo-Fi+Night" alt="Lo‑Fi Night">
+      <div class="card-content">
+        <h2>Lo‑Fi Night</h2>
+        <p>夜のリラックスタイムに最適なチルBGM。柔らかなビートと温かいピアノで心を落ち着かせます。</p>
+        <audio controls>
+          <source src="audio/lofi-night.mp3" type="audio/mpeg">
+          お使いのブラウザは audio タグに対応していません。
+        </audio>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="https://placehold.co/600x400?text=Rainy+Café" alt="Rainy Café">
+      <div class="card-content">
+        <h2>Rainy Café</h2>
+        <p>雨音とジャズギターが織りなす落ち着いた空間を再現。読書や作業の集中力アップに。</p>
+        <audio controls>
+          <source src="audio/rainy-cafe.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="https://placehold.co/600x400?text=Sunny+Morning" alt="Sunny Morning">
+      <div class="card-content">
+        <h2>Sunny Morning</h2>
+        <p>爽やかな朝を彩るアップテンポなアコースティックサウンド。1日の始まりを軽やかに。</p>
+        <audio controls>
+          <source src="audio/sunny-morning.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="https://placehold.co/600x400?text=Ocean+Breeze" alt="Ocean Breeze">
+      <div class="card-content">
+        <h2>Ocean Breeze</h2>
+        <p>波の音とシンセパッドが融合した癒し系アンビエント。瞑想や睡眠前のリラックスに。</p>
+        <audio controls>
+          <source src="audio/ocean-breeze.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 BGM Studio
+  </footer>
+</body>
+</html>
